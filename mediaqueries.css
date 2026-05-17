@@ -1,0 +1,77 @@
+/* ==========================================================================
+   RESPONSIVE DESIGN SYSTEM OVERRIDES
+   ========================================================================== */
+
+@media screen and (max-width: 1400px) {
+  section {
+    margin: 0 5rem;
+  }
+  #profile {
+    height: fit-content;
+    padding: 6rem 0;
+  }
+  .about-containers {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  section {
+    margin: 0 5%;
+    padding-top: 6vh;
+  }
+  #profile {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+    height: fit-content;
+  }
+  .section-container, .experience-details-container {
+    flex-direction: column;
+  }
+  .section__pic-container {
+    width: 260px;
+    height: 260px;
+  }
+  .section__text {
+    text-align: center;
+  }
+  .btn-container, #socials-container {
+    justify-content: center;
+  }
+  .arrow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-info-upper-container {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title-hero {
+    font-size: 2.2rem;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+  .section__text__p2 {
+    font-size: 1.15rem;
+  }
+  article {
+    width: 100%;
+    max-width: 14rem;
+  }
+}

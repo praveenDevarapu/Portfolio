@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praveen Devarapu | DevOps & Site Reliability Engineer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <!-- High-Performance Developer Vector Icons CDN (Fixed Path) -->
+    <link href="https://jsdelivr.net" rel="stylesheet" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Praveen</div>
+
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">./about</a></li>
+          <li><a href="#experience">./skills</a></li>
+          <li><a href="#projects">./infrastructure</a></li>
+          <li><a href="#contact">./connect</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <nav id="hamburger-nav">
+      <div class="logo">Praveen</div>
+      
+      <!-- Simplified status marker for small screens -->
+      <div class="system-status-mobile">
+        <span class="pulse-indicator"></span>
+        <span class="text-neon-green" style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; font-weight: bold;">PROD</span>
+      </div>
+
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">./about</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">./skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">./infrastructure</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">./connect</a></li>
+        </div>
+      </div>
+    </nav>
+    
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.jpeg" alt="Praveen profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title-hero">Devarapu Praveen</h1>
+        <p class="section__text__p2">Site Reliability Engineer & DevOps Professional</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Praveen_resume.pdf')"
+          >
+            Download CV
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/praveen-devarapu-9b1415213'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/praveenDevarapu'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <div class="tech-card-icon"><i class="ri-shield-flash-line"></i></div>
+              <h3>Experience</h3>
+              <p>SRE<br><strong>Olive Crypto Systems</strong></p>
+            </div>
+            <div class="details-container">
+              <div class="tech-card-icon"><i class="ri-graduation-cap-line"></i></div>
+              <h3>Education</h3>
+              <p>B.Tech in Information Technology<br><strong>GMR Institute of Technology</strong></p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              I am an experienced DevOps and Site Reliability Engineer (SRE) specializing in maintaining highly available, zero-downtime banking and blockchain application infrastructures. I have a proven track record of managing enterprise-level distributed architectures, cluster operations, and end-to-end production routing.
+            </p>
+            <p style="margin-top: 10px;">
+              Notably, my infrastructure functionality and operations support for the CBDC application earned recognition with a prestigious award at the <strong>G20 Summit</strong> by the Government of India. I excel at automation, continuous monitoring, disaster recovery migration, and seamless multi-region cluster maintenance.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+        <section id="experience">
+      <p class="section__text__p1">Explore My Stack</p>
+      <h1 class="title">Technical Competencies</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          
+          <!-- Category 1: Automation & Scripting -->
+          <div class="details-container skill-dashboard-card">
+            <h2 class="experience-sub-title"><i class="ri-code-s-slash-line text-neon-blue"></i> Languages & Scripting</h2>
+            <div class="skills-flex-grid">
+              <div class="skill-item">
+                <img src="./assets/python.png" alt="Python icon" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-meta"><h3>Python (DSA)</h3><span class="skill-pct text-neon-green">intermediate</span></div>
+                  <div class="progress-bar"><div class="progress-fill fill-intermediate"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <img src="./assets/sql.png" alt="SQL icon" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-meta"><h3>SQL (TOAD)</h3><span class="skill-pct text-neon-green">intermediate</span></div>
+                  <div class="progress-bar"><div class="progress-fill fill-intermediate"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <img src="./assets/Bash.png" alt="Bash icon" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-meta"><h3>Bash & Shell</h3><span class="skill-pct text-neon-blue">Intermediate</span></div>
+                  <div class="progress-bar"><div class="progress-fill fill-intermediate"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <img src="./assets/Yaml.png" alt="YAML icon" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-meta"><h3>YAML Scripts</h3><span class="skill-pct text-neon-green">intermediate</span></div>
+                  <div class="progress-bar"><div class="progress-fill fill-intermediate"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Platform Engine & Pipelines -->
+          <div class="details-container skill-dashboard-card">
+            <h2 class="experience-sub-title"><i class="ri-server-line text-neon-green"></i> Cloud, DevOps & Automation</h2>
+            <div class="skills-flex-grid">
+              <div class="skill-item">
+                <img src="./assets/azure.jpg" alt="Cloud icon" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-meta"><h3>AWS & Azure Cloud</h3><span class="skill-pct text-neon-green">intermediate</span></div>
+                  <div class="progress-bar"><div class="progress-fill fill-intermediate"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <img src="./assets/Openshift.png" alt="OpenShift icon" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-meta"><h3>OpenShift / K8s Cluster</h3><span class="skill-pct text-neon-green">intermediate</span></div>
+                  <div class="progress-bar"><div class="progress-fill fill-intermediate"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <img src="./assets/ansible.png" alt="Ansible icon" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-meta"><h3>Ansible & IaC Playbooks</h3><span class="skill-pct text-neon-green">intermediate</span></div>
+                  <div class="progress-bar"><div class="progress-fill fill-intermediate"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <img src="./assets/githubactions.png" alt="Git icon" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-meta"><h3>GitHub Actions & Azure DevOps</h3><span class="skill-pct text-neon-green">intermediate</span></div>
+                  <div class="progress-bar"><div class="progress-fill fill-intermediate"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <img src="./assets/rhel.png" alt="Linux icon" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-meta"><h3>RHEL Linux Environment</h3><span class="skill-pct text-neon-green">intermediate</span></div>
+                  <div class="progress-bar"><div class="progress-fill fill-intermediate"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <img src="./assets/kafka.jpg" alt="Kafka icon" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-meta"><h3>Kafka, Nginx & ELK Stack</h3><span class="skill-pct text-neon-blue">Intermediate</span></div>
+                  <div class="progress-bar"><div class="progress-fill fill-intermediate"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <p class="section__text__p1">Browse My Production</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <!-- Project 1: Enterprise CBDC Cluster from Resume -->
+          <div class="details-container color-container">
+            <div class="project-img-wrapper">
+              <img src="./assets/cbdc.png" alt="CBDC Infrastructure Architecture" class="project-media" />
+            </div>
+            <h2 class="project-title text-white">Central Bank Digital Currency (CBDC)</h2>
+            <p style="color: #94a3b8; font-size: 0.95rem; padding: 0 1rem; margin-bottom: 1rem; text-align: left;">
+              Maintained a high-availability Hyperledger Fabric OpenShift cluster without downtime. Handled image deployments, automated routing, DR migration, and business logic troubleshooting.
+            </p>
+            <div class="btn-container project-btns">
+              <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com')">View Architecture</button>
+            </div>
+          </div>
+          
+          <!-- Project 2: Petclinic DevOps Application from Architecture Diagram -->
+          <div class="details-container color-container">
+            <div class="project-img-wrapper">
+              <img src="./assets/petclinicapp.jpg" alt="Petclinic DevOps Application" class="project-media" />
+            </div>
+            <h2 class="project-title text-white">Petclinic DevOps Application</h2>
+            <p style="color: #94a3b8; font-size: 0.95rem; padding: 0 1rem; margin-bottom: 1rem; text-align: left;">
+              Architected a 3-tier distributed microservices app in a cloud-native Kubernetes cluster. Engineered an integrated <strong>ELK Stack & Elastic APM monitoring engine</strong> to aggregate container log streams (stdout/stderr) and trace application runtime performance via centralized Kibana dashboards.
+            </p>
+            <div class="btn-container project-btns">
+              <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com')">View Infrastructure</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <i class="ri-mail-line contact-icon email-icon"></i>
+          <p><a href="mailto:praveen26072001@gmail.com">praveen26072001@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <i class="ri-linkedin-box-fill contact-icon"></i>
+          <p><a href="https://www.linkedin.com/in/praveen-devarapu-9b1415213" target="_blank">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="logo">Praveen</div>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2026 Praveen Devarapu. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

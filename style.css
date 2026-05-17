@@ -1,0 +1,605 @@
+/* ==========================================================================
+   1. TECH ENVIRONMENT CONFIGURATION & FONTS
+   ========================================================================== */
+@import url('https://googleapis.com');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-dark: #0a0e17;           /* Deep Unix console canvas */
+  --bg-card: #121926;           /* High contrast card panel */
+  --neon-green: #00ff66;        /* Automated success pipeline tracking green */
+  --neon-blue: #38bdf8;         /* Cloud architecture blue */
+  --text-white: #ffffff;
+  --text-muted: #94a3b8;        /* Highly readable slate gray text */
+  --border-color: #1e293b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  overflow-x: hidden;
+  /* Cyber matrix server grid visualization pattern */
+  background-image: linear-gradient(rgba(0, 255, 102, 0.015) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0, 255, 102, 0.015) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* ==========================================================================
+   2. RE-ENGINEERED NAVIGATION
+   ========================================================================== */
+nav, #desktop-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 12vh;
+  background-color: rgba(10, 14, 23, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--neon-green);
+  cursor: default;
+}
+
+.logo::before {
+  content: "⚡ ";
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: all 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--neon-green);
+  text-shadow: 0 0 8px rgba(0, 255, 102, 0.3);
+}
+
+/* ==========================================================================
+   DESKTOP NAVIGATION VISIBILITY FIXES
+   ========================================================================== */
+
+/* The main desktop menu container */
+#desktop-nav {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 0 4rem !important;
+  height: 80px !important;
+  width: 100%;
+}
+
+/* Hide the hamburger bar completely on desktop viewports */
+#hamburger-nav {
+  display: none !important;
+}
+
+/* Align the system monitoring text blocks */
+.system-status {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(30, 41, 59, 0.4);
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+}
+
+
+/* ==========================================================================
+   3. SECTIONS & PROFILE LAYOUTS
+   ========================================================================== */
+section {
+  padding-top: 8vh;
+  padding-bottom: 4vh;
+  margin: 0 10rem;
+  min-height: fit-content;
+}
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 85vh;
+  align-items: center;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 360px;
+  width: 360px;
+}
+
+.section__pic-container img {
+  border-radius: 50%;
+  border: 3px solid var(--neon-blue);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.section__text {
+  align-self: center;
+}
+
+.section__text__p1 {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--neon-blue);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.title-hero {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 3rem;
+  color: var(--text-white);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--text-white);
+  margin-bottom: 3rem;
+}
+
+.title::before, .title-hero::before {
+  content: "$ ";
+  color: var(--neon-green);
+}
+
+.section__text__p2 {
+  font-size: 1.4rem;
+  color: var(--neon-green);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   ENTERPRISE SYSTEMS COMPETENCY DASHBOARD
+   ========================================================================== */
+
+/* Overrides structural padding limits on the parent cards */
+.skill-dashboard-card {
+  padding: 2.2rem 1.8rem !important;
+  text-align: left !important; /* Converts text layout to clean enterprise lists */
+  background: #111726 !important;
+  border: 1px solid #1e293b !important;
+}
+
+.skill-dashboard-card .experience-sub-title {
+  text-align: left !important;
+  font-size: 1.3rem !important;
+  margin-bottom: 2rem !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid #1e2a45;
+  padding-bottom: 0.75rem;
+}
+
+/* Flexible vertical layout system - avoids text wrapping/squishing */
+.skills-flex-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Row wrapper for item layout rows */
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.015);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-item:hover {
+  background: rgba(56, 189, 248, 0.04);
+  border-color: rgba(56, 189, 248, 0.25);
+  transform: translateX(4px); /* Interactive shift right on hover */
+}
+
+.skill-icon {
+  width: 2.2rem !important;
+  height: 2.2rem !important;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+}
+
+.skill-info {
+  flex: 1; /* Automatically uses all remaining horizontal space */
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.skill-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-meta h3 {
+  font-size: 1.05rem !important;
+  color: var(--text-white) !important;
+  margin: 0 !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 600 !important;
+}
+
+.skill-pct {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Visual Systems Progress Metrics */
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  background-image: linear-gradient(90deg, var(--neon-blue), var(--neon-green));
+}
+
+/* Custom Skill Level Progress Bar Fills */
+.fill-advanced { width: 90%; }
+.fill-intermediate { width: 75%; }
+
+
+/* ==========================================================================
+   4. DEVOPS CORE CARD COMPONENT SYSTEM
+   ========================================================================== */
+.section-container, .experience-details-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.about-containers {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+
+.details-container {
+  padding: 2.5rem;
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.details-container:hover {
+  border-color: var(--neon-green);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 255, 102, 0.1);
+}
+
+.tech-card-icon {
+  font-size: 2.5rem;
+  color: var(--neon-blue);
+  margin-bottom: 1rem;
+}
+
+.details-container h3, .experience-sub-title {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text-white);
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.text-container p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Skill Sub-categories and Articles Layout */
+.article-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+article {
+  display: flex;
+  width: 11rem;
+  gap: 0.8rem;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+article h3 {
+  font-size: 0.95rem;
+  margin: 0;
+  color: var(--text-white);
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+article .icon {
+  height: 1.6rem;
+  width: 1.6rem;
+  object-fit: contain;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+  filter: invert(1);
+}
+
+/* ==========================================================================
+   5. PRODUCTION DECK & PROJECT VIEWS
+   ========================================================================== */
+.color-container {
+  background: var(--bg-card) !important;
+}
+
+.project-img-wrapper {
+  width: 100%;
+  height: 220px;          /* Uniform, predictable container layout height */
+  overflow: hidden;        /* Safely clips the extra whitespace and edges */
+  background-color: #0b0f19; /* High contrast backfill matching body theme */
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;     /* Centers images both vertically and horizontally */
+  justify-content: center;
+}
+
+/* Crops and auto-fits the uploaded diagrams perfectly */
+.project-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* Crops out unnecessary borders dynamically */
+  object-position: center top; /* Keeps the vital text/graphics framed */
+  border-radius: 6px;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Subtle micro-interaction on hovering your project card container */
+.details-container:hover .project-media {
+  transform: scale(1.04);  /* Micro-zoom without altering the external card size */
+}
+
+.large-project-icon {
+  font-size: 4rem;
+  color: var(--neon-blue);
+}
+
+/* ==========================================================================
+   6. INTERACTIVE UTILITIES & BUTTONS
+   ========================================================================== */
+.btn-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  padding: 0.85rem 1.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  width: auto;
+}
+
+.btn-color-2 {
+  background: transparent;
+  color: var(--neon-green);
+  border: 1px solid var(--neon-green);
+}
+
+.btn-color-2:hover {
+  background: var(--neon-green);
+  color: #000000;
+  box-shadow: 0 0 15px rgba(0, 255, 102, 0.35);
+}
+
+.project-btns {
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+#socials-container {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+#socials-container .icon {
+  filter: invert(1) brightness(0.9); /* Normalizes branding image paths */
+  height: 1.8rem;
+  transition: all 0.2s ease;
+}
+
+#socials-container .icon:hover {
+  transform: translateY(-2px);
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(90deg); /* High-tech interactive green shift on hover */
+}
+
+/* ==========================================================================
+   7. CONTACT MODULE & FOOTER OVERIDES
+   ========================================================================== */
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  margin: 2rem auto;
+  padding: 0.75rem 2rem;
+  gap: 3rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: var(--neon-green);
+}
+
+.contact-info-container p a {
+  color: var(--text-white);
+  text-decoration: none;
+  font-family: 'JetBrains Mono', monospace;
+  transition: color 0.2s ease;
+}
+
+.contact-info-container p a:hover {
+  color: var(--neon-blue);
+}
+
+footer {
+  padding: 3rem 0;
+  border-top: 1px solid var(--border-color);
+  background: #070a10;
+}
+
+footer p {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+}
+
+/* ==========================================================================
+   8. HAMBURGER OVERLAY CONFIG
+   ========================================================================== */
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 18px;
+  width: 26px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--neon-green);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: rgba(18, 25, 38, 0.96);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  width: 200px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links.open {
+  max-height: 300px;
+  padding: 10px 0;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links a {
+  display: block;
+  padding: 12px 24px;
+  text-align: left;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.05rem;
+  color: var(--text-white);
+  text-decoration: none;
+}
+
+.menu-links a:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--neon-green);
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
