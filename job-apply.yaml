@@ -1,0 +1,46 @@
+name: Job Auto-Apply Agent
+
+on:
+  schedule:
+    - cron: "30 3 * * 1-5"   # runs Mon–Fri at 9:00 AM IST (3:30 UTC)
+  workflow_dispatch:           # also lets you trigger it manually from GitHub
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Playwright browser
+        run: playwright install chromium --with-deps
+
+      - name: Run agent — Naukri
+        env:
+          NAUKRI_EMAIL:    ${{ secrets.NAUKRI_EMAIL }}
+          NAUKRI_PASSWORD: ${{ secrets.NAUKRI_PASSWORD }}
+        run: python job_agent.py --platform naukri
+
+      - name: Run agent — LinkedIn
+        env:
+          LINKEDIN_EMAIL:    ${{ secrets.LINKEDIN_EMAIL }}
+          LINKEDIN_PASSWORD: ${{ secrets.LINKEDIN_PASSWORD }}
+        run: python job_agent.py --platform linkedin
+
+      - name: Upload applied_jobs.csv as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: applied-jobs-log-${{ github.run_number }}
+          path: applied_jobs.csv
+          retention-days: 30
